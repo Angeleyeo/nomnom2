@@ -16,7 +16,7 @@ const Login = ({ navigation }) => {
       <InnerContainer>
         <PageLogo resizeMode="cover"></PageLogo>
         <PageTitle>gan is a monster!</PageTitle>
-        <Button title="Click me" onPress={() => navigation.push("Second")} />
+        <Button title="Click me" onPress={() => navigation.push("Main")} />
         <Button title="Tracker" onPress={() => navigation.push("Tracker")} />
       </InnerContainer>
     </StyledContainer>
