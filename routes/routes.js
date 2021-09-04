@@ -3,8 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Login from "../screens/Login.js";
-import Main from "../screens/main.js";
-import Tracker from "../screens/tracker.js";
+import Main from "../screens/Main.js";
+import Tracker from "../screens/Tracker.js";
+import Chart from "../screens/WeeklyChart";
 
 const homeStack = () => {
   const Stack = createStackNavigator();
@@ -24,6 +25,11 @@ const homeStack = () => {
         <Stack.Screen
           name="Tracker"
           component={Tracker}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Chart"
+          component={Chart}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

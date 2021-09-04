@@ -35,7 +35,10 @@ const main = ({ navigation }) => {
           <Text style={styles.smallText}> AHA! </Text>
         </TouchableHighlight>
 
-        <TouchableHighlight style={styles.smallCircle}>
+        <TouchableHighlight
+          style={styles.smallCircle}
+          onPress={() => navigation.push("Chart")}
+        >
           <Text style={styles.smallText}> Weekly Chart </Text>
         </TouchableHighlight>
 
