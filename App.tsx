@@ -1,8 +1,7 @@
-import React from 'react';
-
-//screens
-import Login from './screens/Login';
+import React from "react";
+import Navigator from "./routes/routes.js";
 
 export default function App() {
-  return <Login />;
+  console.disableYellowBox = true;
+  return <Navigator />;
 }
