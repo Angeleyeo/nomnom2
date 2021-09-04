@@ -6,7 +6,7 @@ import {
   Dimensions,
   TouchableHighlight,
 } from "react-native";
-import { createBottomTabNavigator } from '@react-navigation/bottom'
+//import { createBottomTabNavigator } from '@react-navigation/bottom'
 
 const main = ({ navigation }) => {
   return (
