@@ -1,11 +1,5 @@
-import React, { Component } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  TouchableHighlight,
-} from "react-native";
+import React from "react";
+import { StyleSheet, View, Dimensions } from "react-native";
 import graph from "../assets/graph.png"; // gives image path
 
 const main = ({ navigation }) => {
@@ -22,7 +16,7 @@ const main = ({ navigation }) => {
         />
       </View>
       <View style={styles.subContainer}>
-        <text style={{ fontSize: 23 }}>This week...</text>
+        <Text style={{ fontSize: 23 }}>This week...</Text>
         <ul>
           <li>You managed to eat breakfast 6 times!</li>
           <li>You had gastric problems twice</li>
@@ -32,7 +26,7 @@ const main = ({ navigation }) => {
       </View>
       <View style={{ paddingVertical: -20 }}></View>
       <View style={styles.subContainer}>
-        <text style={{ fontSize: 23 }}>Recommendations</text>
+        <Text style={{ fontSize: 23 }}>Recommendations</Text>
         <ul>
           <li>Take a short walk or exercise break in between study hours</li>
           <li>

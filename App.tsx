@@ -5,12 +5,12 @@ import { AppLoading } from "expo";
 
 const fetchFont = () => {
   return Font.loadAsync({
-    'Dancing-Script': require('/Users/angele/nomnom2/assets/fonts/DancingScript-VariableFont_wght.ttf')
-  })
-}
+    "Dancing-Script": require("./assets/fonts/DancingScript-VariableFont_wght.ttf"),
+  });
+};
 
 export default function App() {
-  const[fontLoaded, setfontLoaded] = useState(false);
+  const [fontLoaded, setfontLoaded] = useState(false);
   /*if (!fontLoaded) {
     return (
       <AppLoading 
