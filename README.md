@@ -3,7 +3,7 @@
 'Rabbeats' is an Android/iOS application targetted at youths struggling with disordered eating. 
 
 # Our Inspiration:
-With the prevalation of social media and the uprising use of technology, especially from a young age, youths are at-risk of developing eating disorders. Eating disorders are growing in prevalence in Singapore’s society, especially among adolescents (Oh & Davis, 2020). According to a study with 797 participants, 19.5% of Singaporeans faced a high risk of suffering from eating disorder (Chua et al, 2020). Amids COVID-19 pandemic, the number of eating disorder cases has increased by 15% in eating disorder cases compared to the previous year.
+With the uprising use of technology and social media, especially from a young age, youths are at-risk of developing eating disorders. Eating disorders are growing in prevalence in Singapore’s society, especially among adolescents (Oh & Davis, 2020). According to a study with 797 participants, 19.5% of Singaporeans faced a high risk of suffering from eating disorder (Chua et al, 2020). Amids COVID-19 pandemic, the number of eating disorder cases has increased by 15% in eating disorder cases compared to the previous year.
 
 # Objective:
 - Inculcating better eating habits among youths
