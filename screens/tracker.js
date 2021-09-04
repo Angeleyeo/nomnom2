@@ -28,12 +28,12 @@ const ListItem = ({ item }) => {
 const Tracker = ({ navigation }) => {
   return (
     <React.Fragment>
-      <div className="Tracker" style={{textAlign:'center'}}>
+      <div className="Tracker" style={{textAlign:'center', backgroundColor:'#faf6ee'}}>
         <h1>
         <div style={{float: 'left'}}>
-          <KeyboardBackspaceIcon onClick={() => navigation.push("Main")}></KeyboardBackspaceIcon>
+          <KeyboardBackspaceIcon style={{marginLeft: '10px'}} onClick={() => navigation.push("Main")}></KeyboardBackspaceIcon>
         </div>
-        <Text style={{fontWeight: 'bold', fontSize: '20px' }}> HELLO  How Are You?</Text>
+        <Text style={{fontWeight: 'bold', fontSize: '20px' }}>How Are You?</Text>
           </h1>
       </div>
 
