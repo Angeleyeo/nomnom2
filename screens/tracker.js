@@ -1,5 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 import {
   StyleSheet,
@@ -9,19 +10,17 @@ import {
   SafeAreaView,
   Image,
   FlatList,
+  Dimensions,
+  TouchableHighlight,
 } from "react-native";
 
 const ListItem = ({ item }) => {
   return (
     <View style={styles.item}>
-      <Image
-        source={{
-          uri: item.uri,
-        }}
-        style={styles.itemPhoto}
-        resizeMode="cover"
-      />
-      <Text style={styles.itemText}>{item.text}</Text>
+      <TouchableHighlight style={styles.smallCircle}>
+        <Text>{item.text}</Text>
+        </TouchableHighlight>
+      
     </View>
   );
 };
@@ -29,8 +28,13 @@ const ListItem = ({ item }) => {
 const Tracker = ({ navigation }) => {
   return (
     <React.Fragment>
-      <div className="Tracker">
-        <p>Tracker</p>
+      <div className="Tracker" style={{textAlign:'center'}}>
+        <h1>
+        <div style={{float: 'left'}}>
+          <KeyboardBackspaceIcon onClick={() => navigation.push("Main")}></KeyboardBackspaceIcon>
+        </div>
+        <Text style={{fontWeight: 'bold', fontSize: '20px' }}> How Are You?</Text>
+          </h1>
       </div>
 
       <View style={styles.container}>
@@ -86,51 +90,93 @@ const SECTIONS = [
       },
       {
         key: "4",
-        text: "Frisky",
+        text: "Anxious",
+      },
+      {
+        key: "5",
+        text: "Apathetic",
+      },
+      {
+        key: "6",
+        text: "Self-critical",
       },
     ],
   },
   {
-    title: "Symptoms",
+    title: "Eating Habits",
     horizontal: true,
     data: [
       {
         key: "1",
-        text: "Fine",
+        text: "Morning",
       },
       {
         key: "2",
-        text: "Cramps",
+        text: "Light",
       },
       {
         key: "3",
-        text: "Headache",
+        text: "Medium",
       },
       {
         key: "4",
-        text: "Acne",
+        text: "Heavy",
+      },
+      {
+        key: "5",
+        text: "Afternoon",
       },
     ],
   },
   {
-    title: "Sex Drive",
+    title: "Health",
     horizontal: true,
     data: [
       {
         key: "1",
-        text: "Fine",
+        text: "Nausea",
       },
       {
         key: "2",
-        text: "Cramps",
+        text: "Gastric",
       },
       {
         key: "3",
-        text: "Headache",
+        text: "Light Headache",
       },
       {
         key: "4",
-        text: "Acne",
+        text: "Loss of Appetite",
+      },
+      {
+        key: "4",
+        text: "Unwell",
+      },
+    ],
+  },
+  {
+    title: "Activity",
+    horizontal: true,
+    data: [
+      {
+        key: "1",
+        text: "Social Interaction",
+      },
+      {
+        key: "2",
+        text: "Exercise",
+      },
+      {
+        key: "3",
+        text: "Light",
+      },
+      {
+        key: "4",
+        text: "Medium",
+      },
+      {
+        key: "5",
+        text: "Heavy",
       },
     ],
   },
@@ -147,6 +193,33 @@ const styles = StyleSheet.create({
     color: "#000000",
     marginTop: 20,
     marginBottom: 5,
+  },
+  bigCircle: {
+    borderRadius:
+      Math.round(
+        Dimensions.get("window").width + Dimensions.get("window").height
+      ) / 2,
+    width: Dimensions.get("window").width * 0.6,
+    height: Dimensions.get("window").width * 0.6,
+    backgroundColor: "#F0CCCE",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    marginBottom: Dimensions.get("window").height * 0.1,
+  },
+  smallCircle: {
+    borderRadius:
+      Math.round(
+        Dimensions.get("window").width + Dimensions.get("window").height
+      ) / 2,
+    width: Dimensions.get("window").width * 0.15,
+    height: Dimensions.get("window").width * 0.15,
+    backgroundColor: "#f0dccc",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    marginLeft: Dimensions.get("window").width * 0.013,
+    marginRight: Dimensions.get("window").width * 0.013,
   },
   item: {
     margin: 10,
