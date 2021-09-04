@@ -4,6 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Login from "../screens/Login.js";
 import Second from "../screens/secondpage.js";
+import Tracker from "../screens/tracker.js";
+
 
 const homeStack = () => {
   const Stack = createStackNavigator();
@@ -18,6 +20,11 @@ const homeStack = () => {
         <Stack.Screen
           name="Second"
           component={Second}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Tracker"
+          component={Tracker}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
