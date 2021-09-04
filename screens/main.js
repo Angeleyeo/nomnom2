@@ -8,7 +8,7 @@ import {
 } from "react-native";
 //import { createBottomTabNavigator } from '@react-navigation/bottom'
 
-const main = ({ navigation }) => {
+const Main = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <div>
@@ -36,7 +36,10 @@ const main = ({ navigation }) => {
           <Text style={styles.smallText}> AHA! </Text>
         </TouchableHighlight>
 
-        <TouchableHighlight style={styles.smallCircle}>
+        <TouchableHighlight
+          style={styles.smallCircle}
+          onPress={() => navigation.push("Chart")}
+        >
           <Text style={styles.smallText}> Weekly Chart </Text>
         </TouchableHighlight>
 
@@ -52,7 +55,7 @@ const main = ({ navigation }) => {
   );
 };
 
-export default main;
+export default Main;
 
 const styles = StyleSheet.create({
   container: {
