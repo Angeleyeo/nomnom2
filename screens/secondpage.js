@@ -1,27 +1,90 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { Button } from "react-native";
-import { StyleSheet, Dimensions, TouchableHighlight, Text } from "react-native";
-
+import React, { Component } from "react";
 import {
-  StyledContainer,
-  InnerContainer,
-  PageLogo,
-  PageTitle,
-  myCircle,
-} from "./../components/styles";
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  TouchableHighlight,
+} from "react-native";
 
-const Login = ({ navigation }) => {
-  return (
-    <StyledContainer>
-      <StatusBar style="dark" />
-      <InnerContainer>
-        <PageLogo resizeMode="cover"></PageLogo>
-        <PageTitle>Pearline is a monster</PageTitle>
-        <Button title="Click me" onPress={() => navigation.push("Login")} />
-      </InnerContainer>
-    </StyledContainer>
-  );
-};
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <div>
+          <TouchableHighlight style={styles.bigCircle} underlayColor="#ccc">
+            <Text style={{ fontSize: 30 }}>
+              HAVE YOU EATEN <br />
+              YOUR LUNCH?
+            </Text>
+          </TouchableHighlight>
+        </div>
 
-export default Login;
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+          }}
+        >
+          <TouchableHighlight style={styles.smallCircle}>
+            <Text style={styles.smallText}>How Are You? </Text>
+          </TouchableHighlight>
+          <TouchableHighlight style={styles.smallCircle}>
+            <Text style={styles.smallText}> AHA! </Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.smallCircle}>
+            <Text style={styles.smallText}> Weekly Chart </Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.smallCircle}>
+            <Text style={styles.smallText}> Connect </Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.smallCircle}>
+            <Text style={styles.smallText}> Food Options </Text>
+          </TouchableHighlight>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#faf6ee",
+  },
+  bigCircle: {
+    borderRadius:
+      Math.round(
+        Dimensions.get("window").width + Dimensions.get("window").height
+      ) / 2,
+    width: Dimensions.get("window").width * 0.6,
+    height: Dimensions.get("window").width * 0.6,
+    backgroundColor: "#F0CCCE",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    marginBottom: Dimensions.get("window").height * 0.1,
+  },
+  smallCircle: {
+    borderRadius:
+      Math.round(
+        Dimensions.get("window").width + Dimensions.get("window").height
+      ) / 2,
+    width: Dimensions.get("window").width * 0.15,
+    height: Dimensions.get("window").width * 0.15,
+    backgroundColor: "#f0dccc",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    marginLeft: Dimensions.get("window").width * 0.013,
+    marginRight: Dimensions.get("window").width * 0.013,
+  },
+  smallText: {
+    fontSize: 12,
+  },
+});
