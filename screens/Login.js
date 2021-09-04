@@ -17,6 +17,7 @@ const Login = ({ navigation }) => {
         <PageLogo resizeMode="cover"></PageLogo>
         <PageTitle>gan is a monster!</PageTitle>
         <Button title="Click me" onPress={() => navigation.push("Second")} />
+        <Button title="Tracker" onPress={() => navigation.push("Tracker")} />
       </InnerContainer>
     </StyledContainer>
   );

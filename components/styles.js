@@ -1,6 +1,8 @@
 import styled from "styled-components/native";
 import { View, Text, Image } from "react-native";
 import Constants from "expo-constants";
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+
 
 const StatusBarHeight = Constants.statusBarHeight;
 
