@@ -1,4 +1,3 @@
-# nomnom2
 ## MindfulHacks 2021
 
 'Rabbeats' is an Android/iOS application targetted at youths struggling with disordered eating.
@@ -24,4 +23,4 @@ With the prevalation of social media and the uprising use of technology, especia
 1. Clone the repository to your local directory
 2. Install the Expo cli (https://docs.expo.dev/)
 3. Run `expo start` and you will be redirected to your localhost browser
-4. `Run in web browser` to start the application
+4. Click `Run in web browser` to start the application
